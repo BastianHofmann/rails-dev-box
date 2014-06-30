@@ -43,6 +43,9 @@ Create `config/database.yml` file. username: `vagrant` database: `timecount`
     vm $ bundle exec rake db:seed
 
     vm $ redis-server
+    
+Create secret_token.rb in config/initializers: 
+    `Zeitwacht::Application.config.secret_key_base = 'secret-token-here'` (rake secret)
 
     vm $ rails server
 
