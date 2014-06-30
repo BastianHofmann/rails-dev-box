@@ -18,9 +18,29 @@ Building the virtual machine is this easy:
 
     host $ git clone https://github.com/rails/rails-dev-box.git
     host $ cd rails-dev-box
+    host $ git clone https://github.com/ivoke/zeitwacht.git rails
     host $ vagrant up
 
 That's it.
+
+    host $ sudo vim /etc/hosts
+
+Add:
+
+    192.168.50.4 lvh.me
+    192.168.50.4 *.lvh.me // Wildcards not working on windows
+
+Then:
+
+    vm $ cd /vagrant/rails
+    vm $ rake db:migrate // Maybe rake db:prepare_hstore
+    vm $ rake db:seed
+
+    vm $ redis-server
+
+    vm $ rails server
+
+Open [`ivoke.lvh.me:3000`](http://ivoke.lvh.me:3000/) in your browser.
 
 (If you want to use VMWare Fusion instead of VirtualBox, write `vagrant up --provider=vmware_fusion` instead of `vagrant up` when building the VM for the first time. After that, Vagrant will remember your provider choice, and you won't need to include the `provider` flag again.)
 

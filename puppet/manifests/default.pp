@@ -25,6 +25,13 @@ class { 'apt_get_update':
   stage => preinstall
 }
 
+# --- Redis --------------------------------------------------------------------
+
+class { 'redis':
+  version            => '2.4.17',
+  redis_port         => '6379'
+}
+
 # --- SQLite -------------------------------------------------------------------
 
 package { ['sqlite3', 'libsqlite3-dev']:
