@@ -115,6 +115,22 @@ package { 'git-core':
   ensure => installed
 }
 
+package { 'libqt4-dev':
+  ensure => installed
+}
+
+package { 'libqtwebkit-dev':
+  ensure => installed
+}
+
+package { 'imagemagick':
+  ensure => installed
+}
+
+package { 'libmagickwand-dev':
+  ensure => installed
+}
+
 # Nokogiri dependencies.
 package { ['libxml2', 'libxml2-dev', 'libxslt1-dev']:
   ensure => installed
