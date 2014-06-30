@@ -40,9 +40,8 @@ Create `config/database.yml` file. username: `vagrant` database: `timecount`
     vm $ psql timecount
             -> DROP SCHEMA IF EXISTS hstore; CREATE SCHEMA hstore; CREATE EXTENSION IF NOT EXISTS hstore SCHEMA hstore;
     vm $ bundle exec rake db:migrate
-    vm $ bundle exec rake db:seed
-
     vm $ redis-server
+    vm $ bundle exec rake db:seed
     
 Create secret_token.rb in config/initializers: 
     `Zeitwacht::Application.config.secret_key_base = 'secret-token-here'` (rake secret)
