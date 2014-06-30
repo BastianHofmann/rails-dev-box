@@ -28,8 +28,7 @@ class { 'apt_get_update':
 # --- Redis --------------------------------------------------------------------
 
 class { 'redis':
-  version            => '2.4.17',
-  redis_port         => '6379'
+  version => '2.4.17'
 }
 
 # --- SQLite -------------------------------------------------------------------
@@ -114,9 +113,9 @@ package { 'curl':
   ensure => installed
 }
 
-package { 'build-essential':
-  ensure => installed
-}
+# package { 'build-essential':
+#  ensure => installed
+# }
 
 package { 'git-core':
   ensure => installed
