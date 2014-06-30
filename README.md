@@ -39,8 +39,8 @@ Create `config/database.yml` file. username: `vagrant` database: `timecount`
     
     vm $ psql timecount
             -> DROP SCHEMA IF EXISTS hstore; CREATE SCHEMA hstore; CREATE EXTENSION IF NOT EXISTS hstore SCHEMA hstore;
-    vm $ rake db:migrate
-    vm $ rake db:seed
+    vm $ bundle exec rake db:migrate
+    vm $ bundle exec rake db:seed
 
     vm $ redis-server
 
