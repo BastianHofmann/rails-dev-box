@@ -1,4 +1,4 @@
-$ar_databases = ['activerecord_unittest', 'activerecord_unittest2', 'timecount']
+$ar_databases = ['timecount']
 $as_vagrant   = 'sudo -u vagrant -H bash -l -c'
 $home         = '/home/vagrant'
 
@@ -27,8 +27,8 @@ class { 'apt_get_update':
 
 # --- Redis --------------------------------------------------------------------
 
-class { 'redis':
-  version => '2.4.17'
+package { ['redis-server']:
+  ensure => installed;
 }
 
 # --- SQLite -------------------------------------------------------------------
