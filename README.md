@@ -33,6 +33,11 @@ Add:
 Then:
 
     vm $ cd /vagrant/rails
+    vm $ bundle install
+    
+Create `config/database.yml` file. username: `vagrant` database: `timecount`
+    
+    
     vm $ rake db:migrate // Maybe rake db:prepare_hstore
     vm $ rake db:seed
 
