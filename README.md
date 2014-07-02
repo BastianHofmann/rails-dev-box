@@ -32,7 +32,7 @@ Add:
 
 Then:
     
-    vm $ sudo apt-get install build-essential
+    vm $ sudo apt-get install libqt4-dev
     vm $ cd /vagrant/rails
     vm $ bundle install
     
