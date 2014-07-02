@@ -33,11 +33,13 @@ Add:
 Then:
     
     vm $ sudo apt-get install libqt4-dev
+    vm $ sudo apt-get install libmagickwand-dev
     vm $ cd /vagrant/rails
     vm $ bundle install
     
 Create `config/database.yml` file. username: `vagrant` database: `timecount`
     
+    vm $ createdb timecount
     vm $ psql timecount
             -> DROP SCHEMA IF EXISTS hstore; CREATE SCHEMA hstore; CREATE EXTENSION IF NOT EXISTS hstore SCHEMA hstore;
     vm $ bundle exec rake db:migrate
