@@ -31,7 +31,8 @@ Add:
     192.168.50.4 *.lvh.me // Wildcards not working on windows
 
 Then:
-
+    
+    vm $ sudo apt-get install build-essential
     vm $ cd /vagrant/rails
     vm $ bundle install
     
